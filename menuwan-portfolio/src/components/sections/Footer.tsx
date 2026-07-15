@@ -58,7 +58,6 @@ export default function Footer() {
 
           <p className="flex items-center gap-2">
             Built with React, TypeScript & Tailwind CSS
-            <FaHeart className="text-red-500" />
           </p>
 
         </div>
