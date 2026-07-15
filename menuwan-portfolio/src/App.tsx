@@ -13,6 +13,7 @@ function App() {
     <div className="min-h-screen bg-[#050816] text-white">
       <Navbar />
 
+
       <main>
         <Hero />
         <About />
