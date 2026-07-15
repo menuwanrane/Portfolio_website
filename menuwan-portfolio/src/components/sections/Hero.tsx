@@ -8,9 +8,8 @@ import {
   FaStar,
 } from "react-icons/fa";
 import { profile } from "../../data/profile";
-
-// Replace this with your image later
 import profileImage from "../../assets/images/profile.png";
+import resumePdf from "../../assets/resume/Don Menuwan Ranaweera resume.pdf";
 
 export default function Hero() {
   return (
@@ -95,7 +94,8 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
 
             <a
-              href="/Menuwan_Ranaweera_CV.pdf"
+              href={resumePdf}
+              download
               className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-7 py-4 font-semibold transition hover:scale-105"
             >
               <FaDownload />
