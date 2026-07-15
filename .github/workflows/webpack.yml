@@ -10,13 +10,13 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: menuwan-portfolio
 
     steps:
       - name: Checkout
@@ -28,19 +28,21 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
         run: npm run build
 
-      - name: Upload Pages Artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: menuwan-portfolio/dist
 
   deploy:
     needs: build
-
     runs-on: ubuntu-latest
 
     environment:
