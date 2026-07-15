@@ -1,11 +1,3 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaWhatsapp,
-  FaHeart,
-} from "react-icons/fa";
-
 import { socials } from "../../data/socials";
 
 export default function Footer() {
